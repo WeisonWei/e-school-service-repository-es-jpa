@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+
+spring:
+  data:
+    elasticsearch:
+      #cluster-name: ${SCHOOL_SEARCH_CLUSTER-:docker-cluster}
+      cluster-nodes: ${SCHOOL_SEARCH_NODES-:localhost:9300}
+      #properties: {username:admin,password:123123，client.transport.sniff:true}
+
+
